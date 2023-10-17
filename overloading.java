@@ -8,7 +8,7 @@ public class overloading {
 		System.out.println("Enter length and breadth of the rectangle");
 		length=sc.nextInt();
 		breadth=sc.nextInt();
-		System.out.println("Enter heightand base of triangle");
+		System.out.println("Enter height and base of triangle");
 		height=sc.nextFloat();
 		base=sc.nextFloat();
 		System.out.println("Enter radius of circle");
