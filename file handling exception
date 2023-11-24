@@ -1,0 +1,40 @@
+package javaprograms;
+
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class FileHandling{
+
+	public static void main(String[] args) {
+		String str="my name is jismi";
+		char [] data=new char[50];
+		FileWriter input=null;
+		FileWriter output=null;
+		FileReader string=null;
+		try {
+			input=new FileWriter("inputfile.txt");
+			output=new FileWriter("outputfile.txt");
+			input.write(str);
+			System.out.println("inputfile.txt");
+			System.out.println(str);
+			input.flush();
+			input.close();
+			string=new FileReader("input.txt");
+			int size=string.read(data);
+			string.close();
+			System.out.println("outputfile.txt");
+			System.out.println(str);
+			output.write(data,0,size);
+			output.flush();
+			output.close();
+			
+		}
+		catch(IOException e){
+			e.printStackTrace();
+			
+		}
+	}
+
+}
